@@ -31,7 +31,7 @@ export default function TodoInput(props: { addTodo: (todoItem: TodoItem) => void
         variant="standard"
         color="warning"
         focused
-
+        sx={{ input: { color: '#f57c00' } }}
         value={input}
         size="small"
         margin='normal'

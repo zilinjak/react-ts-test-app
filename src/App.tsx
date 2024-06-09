@@ -22,7 +22,12 @@ function App() {
     setTodoItems(newItems)
   }
 
-  
+  function deleteItem(index: number){
+    const newItems = [...todoItems]
+    newItems.splice(index, 1)
+    setTodoItems(newItems)
+  }
+
 
   return (
     <div className="main">
@@ -34,7 +39,7 @@ function App() {
         <Grid item xs={4}/>
         <Grid item xs={4}/>
         <Grid item xs={4}>
-          <TodoList items={todoItems} check={check} />
+          <TodoList items={todoItems} check={check} deleteItem={deleteItem}/>
         </Grid>
     </Grid>
   </div>
